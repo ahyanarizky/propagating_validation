@@ -3,3 +3,17 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form.ui.form(method='POST' action='/')
+    .field
+      label Event Name
+      input(type='text', name='eventName', placeholder='What`s your event name..?')
+    .field
+      label Event Date
+      input(type='Date', name='eventDate', placeholder='When your event start..?')
+    .field
+      label Organized by
+      input(type='text', name='eventOrganizer', placeholder='Which EO handled this events?')
+    .field
+      label Email
+      input(type='email', name='email', placeholder='Where we can ask for further information..?')
+    button.ui.button.ui.inverted.teal(type='submit') Submit
