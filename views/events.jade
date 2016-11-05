@@ -1,0 +1,18 @@
+extends layout
+block content
+  h1=title
+  -if(data)
+    table.ui.inverted.purple.table
+      thead
+        tr
+          th Event Name
+          th Event Date
+          th Organized By
+          th Email Contact
+      tbody
+        each key in data
+          tr
+            td #{key.eventName}
+            td #{key.eventDate}
+            td #{key.eventOrganizer}
+            td #{key.email}

@@ -16,4 +16,13 @@ block content
     .field
       label Email
       input(type='email', name='email', placeholder='Where we can ask for further information..?')
-    button.ui.button.ui.inverted.teal(type='submit') Submit
+    button.ui.button.ui.inverted.violet(type='submit') Submit
+  -if(alert)
+    .ui.error.message
+      i.close.icon
+      .header
+        | There was some errors with your submission
+      ul.list
+        li You must include both a upper and lower case letters in your password.
+        li You need to select your home country.
+        li #{alert}
