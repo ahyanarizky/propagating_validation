@@ -6,23 +6,21 @@ block content
   form.ui.form(method='POST' action='/')
     .field
       label Event Name
-      input(type='text', name='eventName', placeholder='What`s your event name..?')
+      input(type='text', name='eventName', placeholder='What`s your event name..?' required)
     .field
       label Event Date
-      input(type='Date', name='eventDate', placeholder='When your event start..?')
+      input(type='Date', name='eventDate', placeholder='When your event start..?' required)
     .field
       label Organized by
-      input(type='text', name='eventOrganizer', placeholder='Which EO handled this events?')
+      input(type='text', name='eventOrganizer', placeholder='Which EO handled this events?' required)
     .field
       label Email
-      input(type='email', name='email', placeholder='Where we can ask for further information..?')
+      input(type='email', name='email', placeholder='Where we can ask for further information..?' required)
     button.ui.button.ui.inverted.violet(type='submit') Submit
   -if(alert)
     .ui.error.message
       i.close.icon
       .header
-        | There was some errors with your submission
+        | Registration Error
       ul.list
-        li You must include both a upper and lower case letters in your password.
-        li You need to select your home country.
-        li #{alert}
+        li Your event name already been used. Please Try another name.

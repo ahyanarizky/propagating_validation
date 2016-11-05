@@ -5,7 +5,13 @@ html
     link(rel='stylesheet', href='/stylesheets/semantic.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    .ui.teal.two.item.inverted.menu
+      a.item(href='/')
+        | Register your event
+      a.item(href='/events')
+        | See events registered
     block content
+
   script(src="/javascripts/jquery.min.js")
   script(src="/javascripts/semantic.min.js")
   script(src="/javascripts/javascript.js")

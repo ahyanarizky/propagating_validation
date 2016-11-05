@@ -20,10 +20,10 @@ router.post('/', function(req, res, next) {
                 alert: err.message
             })
         } else {
-            // res.render('events', {
-            //     title : 'Registered Events'
-            // })
-            res.send('Registration success')
+            res.render('events', {
+                title: 'Registered Events',
+                data: data
+            })
         }
     })
 });
